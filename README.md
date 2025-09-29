@@ -48,7 +48,7 @@ graph LR;
 2. Клонируйте репозиторий:
 
 ```bash
-git clone https://github.com/quietcow1/HAproxyTorsObfs4.git
+git clone https://github.com/quietcow1/v2ray-haproxy-tor-obfs4.git
 cd HAproxyTorsObfs4
 ```
 
