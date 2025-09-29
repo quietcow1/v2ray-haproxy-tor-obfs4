@@ -1,0 +1,98 @@
+services:
+  tor1:
+    build: ./tor
+    container_name: tor1
+    volumes:
+      - ./tor/bridges:/bridges:rw
+    environment:
+      - CRON_SCHEDULE=0 3 * * *
+      - CRON_TASKS=get_bridges,check_bridges,restart_tor
+    restart: unless-stopped
+    networks:
+      - tor_net
+
+  tor2:
+    build: ./tor
+    container_name: tor2
+    volumes:
+      - ./tor/bridges:/bridges:ro
+    environment:
+      - CRON_SCHEDULE=3 3 * * *
+      - CRON_TASKS=restart_tor
+    restart: unless-stopped
+    networks:
+      - tor_net
+
+  tor3:
+    build: ./tor
+    container_name: tor3
+    volumes:
+      - ./tor/bridges:/bridges:ro
+    environment:
+      - CRON_SCHEDULE=6 3 * * *
+      - CRON_TASKS=restart_tor
+    restart: unless-stopped
+    networks:
+      - tor_net
+
+  haproxy:
+    image: haproxy:latest
+    container_name: haproxy
+    volumes:
+      - ./haproxy:/usr/local/etc/haproxy:ro
+    sysctls:
+      net.ipv4.ip_unprivileged_port_start: 0
+    ports:
+      - "8119:8119"
+    restart: unless-stopped
+    networks:
+      - tor_net
+
+  privoxy:
+    build: ./privoxy
+    container_name: privoxy
+    ports:
+      - "8118:8118"
+    restart: unless-stopped
+    networks:
+      - tor_net
+
+  v2ray:
+    image: v2fly/v2fly-core
+    container_name: v2ray
+    restart: unless-stopped
+    ports:
+      - "10086:10086"
+    volumes:
+      - ./v2ray/config.json:/etc/v2ray/config.json
+    command: run -c /etc/v2ray/config.json
+    environment:
+      - v2ray.vmess.aead.forced=false
+    networks:
+      - tor_net
+
+  caddy:
+    image: caddy:alpine
+    container_name: caddy
+    restart: unless-stopped
+    cap_add:
+      - NET_ADMIN
+    ports:
+      - "80:80"
+      - "443:443"
+      - "443:443/udp"
+    volumes:
+      - ./caddy/conf:/etc/caddy
+      - ./caddy/site:/srv
+      - caddy_data:/data
+      - caddy_config:/config
+    networks:
+      - tor_net
+
+volumes:
+  caddy_data:
+  caddy_config:
+  
+networks:
+  tor_net:
+    driver: bridge

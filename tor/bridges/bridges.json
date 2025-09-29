@@ -1,0 +1,101 @@
+{ "bridges": [
+{
+  "type": "obfs4",
+  "ip": "61.3.190.80",
+  "port": 8288,
+  "fingerprint": "E3154C3BB7E0066A75C4FF9EC80C6C6F359275F7",
+  "cert": "T2YISndig2y6IOrJdohk9AzsrwH5ooNK63XNiG+yJD9np11gVPZxCNxSnYimu9Zuue9kJA",
+  "iat-mode": 0,
+  "last_success": 1743977827,
+  "failures": 2
+}
+,
+{
+  "type": "obfs4",
+  "ip": "54.37.2.156",
+  "port": 5456,
+  "fingerprint": "4645AE8D88A42A1354C6367223196052925957C8",
+  "cert": "6Yy+zFXEguvP25AiBP8vC76wzYDKx1VDVzoIBkxEDiLNzDx0+Ud8qNkw+K5qDAIydKZRbQ",
+  "iat-mode": 0,
+  "last_success": 1743977827,
+  "failures": 2
+}
+,
+{
+  "type": "obfs4",
+  "ip": "185.192.124.64",
+  "port": 993,
+  "fingerprint": "978180445CF4B1748DBD2FEE550F93BE8C117AF9",
+  "cert": "bfZhNvbOb4XNnpY7htuwQv5Folg6uNmQzT7OQIwN5H9QeRHVjMPPjhk+VvPL5b+xb5A3GQ",
+  "iat-mode": 0,
+  "last_success": 1750338109,
+  "failures": 0
+}
+,
+{
+  "type": "obfs4",
+  "ip": "91.134.91.79",
+  "port": 53146,
+  "fingerprint": "F6E3C527581A0C83750E5A1794F5A223A148520F",
+  "cert": "gEEFkjnzM82mDs8hiQgcmyroSXMRhVLQnA3nE2mzlX6SAMF8puYiBXQZESLjIgmNE2zRZg",
+  "iat-mode": 0,
+  "last_success": 1750338091,
+  "failures": 1
+}
+,
+{
+  "type": "obfs4",
+  "ip": "130.61.236.194",
+  "port": 587,
+  "fingerprint": "DF8D30F28DB498C7F9D2C91408167FFC563BEE56",
+  "cert": "bEJ/2mXNYMKDdgH1S8vyGGUnqBMJ+wnZcvDfe2/Px2b08l9A7sXGN4izuoAz6rAWs0CGZg",
+  "iat-mode": 0,
+  "last_success": 1750338109,
+  "failures": 0
+}
+,
+{
+  "type": "obfs4",
+  "ip": "37.59.24.55",
+  "port": 44209,
+  "fingerprint": "D961BEADB742E23093AF6EC74D8B206F87D985A0",
+  "cert": "P20ALYts0lINSzculZVW0GbmZ5c1hWYkf2ppgpphYR0I1yXgIKeAd7iPBPwfZkXzlzQkEQ",
+  "iat-mode": 0,
+  "last_success": 1743977827,
+  "failures": 2
+}
+,
+{
+  "type": "obfs4",
+  "ip": "31.171.241.220",
+  "port": 80,
+  "fingerprint": "D2E65F8881DD3712890051E085039108D1E9FB1D",
+  "cert": "Dap/m+8vno2WUKe7+dmY35TWs17FedjVGXyaSHDMvDjM9TxEiIqjZ3O4BM5kpn4yqIWrcw",
+  "iat-mode": 0,
+  "last_success": 1743977827,
+  "failures": 2
+}
+,
+{
+  "type": "obfs4",
+  "ip": "109.129.106.222",
+  "port": 6969,
+  "fingerprint": "2820F70D56289492E58A306B9A48B255EE17E030",
+  "cert": "DK/gamondNFpRBIyssyG7dMK9F3N+4V5ab4srKcW94LfTIjzOLzaXLp0xxx/i3P7hQYgQQ",
+  "iat-mode": 0,
+  "last_success": 1750338109,
+  "failures": 0
+}
+,
+{
+  "type": "obfs4",
+  "ip": "57.129.58.231",
+  "port": 36884,
+  "fingerprint": "9BF12EC5EADF1EF97078BB6E4E1CAA5041A38739",
+  "cert": "GHa8FrPWOSqkdd7Y/rVQZue+gYnaFNJBXVOxBHE1WUSm/QIlxGNo25QS9kJ18OT8kDPccg",
+  "iat-mode": 0,
+  "last_success": 1743977827,
+  "failures": 2
+}
+
+] }
